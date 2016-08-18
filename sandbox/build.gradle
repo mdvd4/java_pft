@@ -1,3 +1,4 @@
 apply plugin: 'java'
 apply plugin: 'application'
 mainClassName = "lavr.stqa.pft.sandbox.MyFirstProgram"
+mainClassName = "lavr.stqa.pft.sandbox.МуDistanceProgram"
