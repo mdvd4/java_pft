@@ -13,4 +13,19 @@ public class Point {
     this.x=x;
     this.y=y;
   }
+
+  public double distance(Point point) {
+    /** метод вычисляющая дистанцию между текущей точкой и точкой point */
+    return Math.sqrt(Math.pow((this.x - point.x), 2) + Math.pow((this.y - point.y), 2));
+  }
+
+  public String texttoprint (Point point) {
+    /** метод формирующий текст вида  "растояние между текущей точкой  (x1,y1), и точкой (x2,y2) равно" */
+    return "растояние между текущей точкой (" + this.x + "," + this.y + "), и точкой (" + point.x + "," + point.y + ") равно ";
+  }
+
+  public String textdistance (Point point) {
+    /** метод формирующий текст вида  "растояние между текущей точкой  (x1,y1), и точкой (x2,y2) равно" */
+    return "растояние между текущей точкой (" + this.x + "," + this.y + "), и точкой (" + point.x + "," + point.y + ") равно "+  Math.sqrt(Math.pow((this.x - point.x), 2) + Math.pow((this.y - point.y), 2));
+  }
 }
