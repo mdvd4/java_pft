@@ -2,3 +2,10 @@ apply plugin: 'java'
 apply plugin: 'application'
 mainClassName = "lavr.stqa.pft.sandbox.MyFirstProgram"
 mainClassName = "lavr.stqa.pft.sandbox.МуDistanceProgram"
+
+repositories {
+    mavenCentral()
+}
+dependencies {
+    compile 'org.testng:testng:6.9.10'
+}
