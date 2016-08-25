@@ -53,7 +53,7 @@ public class ContactData {
     return fhonefax;
   }
 
-  public String getEmal() {
+  public String getEmail() {
     return emal;
   }
 
