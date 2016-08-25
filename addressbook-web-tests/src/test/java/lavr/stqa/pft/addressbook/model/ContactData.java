@@ -8,7 +8,7 @@ public class ContactData {
   private final String fhonemobile;
   private final String fonework;
   private final String fhonefax;
-  private final String emal;
+  private final String email;
   private final String email2;
   private final String email3;
 
@@ -20,7 +20,7 @@ public class ContactData {
     this.fhonemobile = fhonemobile;
     this.fonework = fonework;
     this.fhonefax = fhonefax;
-    this.emal = emal;
+    this.email = emal;
     this.email2 = email2;
     this.email3 = email3;
   }
@@ -54,7 +54,7 @@ public class ContactData {
   }
 
   public String getEmail() {
-    return emal;
+    return email;
   }
 
   public String getEmail2() {
