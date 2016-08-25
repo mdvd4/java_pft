@@ -11,7 +11,7 @@ public class GroupHelper {
   private FirefoxDriver wd;
 
   public GroupHelper(FirefoxDriver wd) {
-    this.wd=wd;
+    this.wd = wd;
   }
 
   public void returnToGroupPage() {
