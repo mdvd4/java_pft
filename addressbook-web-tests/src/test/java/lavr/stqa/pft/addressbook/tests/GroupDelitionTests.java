@@ -8,7 +8,7 @@ public class GroupDelitionTests extends TestBase {
   @Test
   public void testGroupDelition() {
     app.getNavigationHelper().gotoGroupPage();
-    if (! app.getGroupHelper().isThereAGroup()){
+    if (!app.getGroupHelper().isThereAGroup()) {
       app.getGroupHelper().createGroupe(new GroupData("test1", "test2", null));
     }
     app.getGroupHelper().selectGroup();
