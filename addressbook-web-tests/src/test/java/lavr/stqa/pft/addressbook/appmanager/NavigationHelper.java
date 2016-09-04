@@ -22,7 +22,4 @@ public class NavigationHelper extends HelperBase {
     click(By.linkText("home"));
   }
 
-  public void alertAccept() {
-    wd.switchTo().alert().accept();
-  }
 }
