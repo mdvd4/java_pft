@@ -11,8 +11,8 @@ import org.testng.annotations.BeforeMethod;
  */
 public class TestBase {
 
-  String browser = BrowserType.FIREFOX;
-  //String browser = BrowserType.CHROME;
+  //String browser = BrowserType.FIREFOX;
+  String browser = BrowserType.CHROME;
   //String browser = BrowserType.IE;
 
 
