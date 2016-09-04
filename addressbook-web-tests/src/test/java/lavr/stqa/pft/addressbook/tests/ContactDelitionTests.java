@@ -1,6 +1,5 @@
 package lavr.stqa.pft.addressbook.tests;
 
-import lavr.stqa.pft.addressbook.appmanager.HelperBase;
 import org.testng.annotations.Test;
 
 /**

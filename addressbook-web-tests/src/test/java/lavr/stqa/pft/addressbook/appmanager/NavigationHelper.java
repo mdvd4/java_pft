@@ -1,9 +1,7 @@
 package lavr.stqa.pft.addressbook.appmanager;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  * Created by Lavr on 25.08.2016.
@@ -21,11 +19,11 @@ public class NavigationHelper extends HelperBase {
             && isElementPresent(By.name("new"))) {
       return;
     }
-      click(By.linkText("groups"));
+    click(By.linkText("groups"));
   }
 
   public void gotoHomePage() {
-    if (isElementPresent(By.id("maintable"))){
+    if (isElementPresent(By.id("maintable"))) {
       return;
     }
     click(By.linkText("home"));

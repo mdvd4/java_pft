@@ -3,7 +3,6 @@ package lavr.stqa.pft.addressbook.appmanager;
 import lavr.stqa.pft.addressbook.model.GroupData;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 
 /**
  * Created by Lavr on 25.08.2016.
