@@ -11,7 +11,12 @@ import org.testng.annotations.BeforeMethod;
  */
 public class TestBase {
 
-  protected final ApplicationMenager app = new ApplicationMenager(BrowserType.FIREFOX);
+  String browser = BrowserType.FIREFOX;
+  //String browser = BrowserType.CHROME;
+  //String browser = BrowserType.IE;
+
+
+  protected final ApplicationMenager app = new ApplicationMenager(browser);
 
   @BeforeMethod
   public void setUp() throws Exception {
