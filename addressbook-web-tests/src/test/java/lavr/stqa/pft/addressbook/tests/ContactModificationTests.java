@@ -9,10 +9,10 @@ import org.testng.annotations.Test;
 public class ContactModificationTests extends TestBase {
 
   @Test
-  public void testContactModification () {
+  public void testContactModification() {
     app.getNavigationHelper().gotoHomePage();
     app.getContactHelper().editContact();
-    app.getContactHelper().fillContactForm(new ContactData("John", "Smith_mod1", null, "123-34-45-99", "123-34-45-02", null,null, null,"john@mail2.com",null));
+    app.getContactHelper().fillContactForm(new ContactData("John", "Smith_mod1", null, null, "123-34-45-99", "123-34-45-02", null, null, null, "john@mail2.com", null),false);
     app.getContactHelper().submitContactModification();
     app.getContactHelper().returnToHomePage();
   }

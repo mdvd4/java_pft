@@ -3,6 +3,7 @@ package lavr.stqa.pft.addressbook.model;
 public class ContactData {
   private final String firstname;
   private final String lastname;
+  private String group;
   private final String address;
   private final String fhonehome;
   private final String fhonemobile;
@@ -12,9 +13,10 @@ public class ContactData {
   private final String email2;
   private final String email3;
 
-  public ContactData(String firstname, String lastname, String address, String fhonehome, String fhonemobile, String fonework, String fhonefax, String emal, String email2, String email3) {
+  public ContactData(String firstname, String lastname, String group, String address, String fhonehome, String fhonemobile, String fonework, String fhonefax, String emal, String email2, String email3) {
     this.firstname = firstname;
     this.lastname = lastname;
+    this.group = group;
     this.address = address;
     this.fhonehome = fhonehome;
     this.fhonemobile = fhonemobile;
@@ -63,5 +65,9 @@ public class ContactData {
 
   public String getEmail3() {
     return email3;
+  }
+
+  public String getGroup() {
+    return group;
   }
 }
