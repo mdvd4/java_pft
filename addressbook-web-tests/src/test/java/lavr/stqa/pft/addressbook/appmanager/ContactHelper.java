@@ -45,20 +45,6 @@ public class ContactHelper extends HelperBase {
     }
   }
 
-  // метод  заполняющий форму контакта без Select  и проверки типа формы или редактирования
-  public void fillContactForm(ContactData contactData) {
-    type(By.name("firstname"), contactData.getFirstname());
-    type(By.name("lastname"), contactData.getLastname());
-    type(By.name("address"), contactData.getAddress());
-    type(By.name("home"), contactData.getFhonehome());
-    type(By.name("mobile"), contactData.getFhonemobile());
-    type(By.name("work"), contactData.getFonework());
-    type(By.name("fax"), contactData.getFhonefax());
-    type(By.name("email"), contactData.getEmail());
-    type(By.name("email2"), contactData.getEmail2());
-    type(By.name("email3"), contactData.getEmail3());
-  }
-
   public void initContactCreation() {
     click(By.linkText("add new"));
   }
@@ -82,9 +68,7 @@ public class ContactHelper extends HelperBase {
 
   public void createContact(ContactData contact, boolean creation) {
     initContactCreation();
-    // вызыв метода  заполняющего форму контакта без Select  и проверки типа формы или редактирования
-    // компилятор определяет метод по составу передаваемых параметров
-    fillContactForm(contact);
+    fillContactForm(contact, creation);
     submitContactCreation();
     returnToHomePage();
   }
