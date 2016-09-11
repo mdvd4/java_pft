@@ -12,16 +12,16 @@ public class GroupDelitionTests extends TestBase {
   public void testGroupDelition() {
     app.getNavigationHelper().gotoGroupPage();
     if (!app.getGroupHelper().isThereAGroup()) {
-      app.getGroupHelper().createGroupe(new GroupData( "test1", "test2", null));
+      app.getGroupHelper().createGroupe(new GroupData("test1", "test2", null));
     }
     List<GroupData> before = app.getGroupHelper().GetGroupList();
-    app.getGroupHelper().selectGroup(before.size()-1);
+    app.getGroupHelper().selectGroup(before.size() - 1);
     app.getGroupHelper().deleteSelectedGroups();
     app.getGroupHelper().returnToGroupPage();
     List<GroupData> after = app.getGroupHelper().GetGroupList();
-    Assert.assertEquals(after.size(),before.size()-1);
+    Assert.assertEquals(after.size(), before.size() - 1);
 
-    before.remove(before.size()-1);
+    before.remove(before.size() - 1);
     Assert.assertEquals(before, after);
   }
 

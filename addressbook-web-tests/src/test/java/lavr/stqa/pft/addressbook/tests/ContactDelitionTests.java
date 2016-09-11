@@ -11,7 +11,7 @@ public class ContactDelitionTests extends TestBase {
   @Test
   public void testContactDelition() {
     if (!app.getContactHelper().isThereAContact()) {
-      app.getContactHelper().createContact(new ContactData("John", "Smith","[none]", "www.leningrad.spb.ru", "123-34-45-01", null, null, "123-34-45-03", "john@mail.com", null, null), true);
+      app.getContactHelper().createContact(new ContactData("John", "Smith", "[none]", "www.leningrad.spb.ru", "123-34-45-01", null, null, "123-34-45-03", "john@mail.com", null, null), true);
     }
     app.getNavigationHelper().gotoHomePage();
     app.getContactHelper().selectContact();
