@@ -49,39 +49,51 @@ public class ContactHelper extends HelperBase {
     }
   }
 
-  public void initContactCreation() {
+  public void initCreation() {
     click(By.linkText("add new"));
   }
 
-  public void deleteSelectedContact() {
+  private void deleteSelectedContact() {
     click(By.xpath("//div[@id='content']/form[2]/div[2]/input"));
     alertAccept();
   }
 
-  public void selectContact(int index) {
+  private void selectContact(int index) {
     wd.findElements(By.name("selected[]")).get(index).click();
   }
 
-  public void editContact(int index) {
+  private void editContact(int index) {
     wd.findElements(By.xpath("//img[@src='icons/pencil.png']")).get(index).click(); // дай мне все "карандашики" (icons/pencil.png), кликни на нужный (index) мне
   }
 
-  public void submitContactModification() {
+  private void submitContactModification() {
     click(By.xpath("//div[@id='content']/form[1]/input[22]"));
   }
 
-  public void createContact(ContactData contact) {
-    initContactCreation();
+  public void create(ContactData contact) {
+    initCreation();
     fillContactForm(contact, true);
     submitContactCreation();
     returnToHomePage();
+  }
+
+  public void modify(int index, ContactData contact) {
+    editContact(index);
+    fillContactForm(contact, false);
+    submitContactModification();
+    returnToHomePage();
+  }
+
+  public void delete(int index) {
+    selectContact(index);
+    deleteSelectedContact();
   }
 
   public boolean isThereAContact() {
     return isElementPresent(By.name("selected[]"));
   }
 
-  public List<ContactData> GetContactList() {
+  public List<ContactData> list() {
     List<ContactData> contacts = new ArrayList<ContactData>();
     List<WebElement> elements = wd.findElements(By.cssSelector("tr[name=entry]"));
     for (WebElement element : elements) {
