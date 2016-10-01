@@ -20,6 +20,7 @@ public class ContactModificationTests extends TestBase {
     }
     List<ContactData> before = app.getContactHelper().GetContactList();
     app.getContactHelper().editContact();
+    // попоробовать исправитьть добавить ID
     ContactData contact = new ContactData("John", "Smith_mod1", null, null, "123-34-45-99", "123-34-45-02", null, null, null, "john@mail2.com", null);
     app.getContactHelper().fillContactForm(contact, false);
     app.getContactHelper().submitContactModification();
