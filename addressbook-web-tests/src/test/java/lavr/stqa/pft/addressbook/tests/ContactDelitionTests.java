@@ -18,7 +18,7 @@ public class ContactDelitionTests extends TestBase {
     }
     List<ContactData> before = app.getContactHelper().GetContactList();
     app.getNavigationHelper().gotoHomePage();
-    app.getContactHelper().selectContact();
+    app.getContactHelper().selectContact(before.size() - 1);
     app.getContactHelper().deleteSelectedContact();
     app.getNavigationHelper().gotoHomePage();
     List<ContactData> after = app.getContactHelper().GetContactList();
