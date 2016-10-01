@@ -17,10 +17,10 @@ public class ContactDelitionTests extends TestBase {
       app.getContactHelper().createContact(new ContactData("John", "Smith", "[none]", "www.leningrad.spb.ru", "123-34-45-01", null, null, "123-34-45-03", "john@mail.com", null, null));
     }
     List<ContactData> before = app.getContactHelper().GetContactList();
-    app.getNavigationHelper().gotoHomePage();
+    app.goTo().gotoHomePage();
     app.getContactHelper().selectContact(before.size() - 1);
     app.getContactHelper().deleteSelectedContact();
-    app.getNavigationHelper().gotoHomePage();
+    app.goTo().gotoHomePage();
     List<ContactData> after = app.getContactHelper().GetContactList();
     Assert.assertEquals(after.size(), before.size() - 1);
 
