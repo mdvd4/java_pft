@@ -3,7 +3,9 @@ package lavr.stqa.pft.addressbook.tests;
 import lavr.stqa.pft.addressbook.appmanager.ApplicationMenager;
 import org.openqa.selenium.remote.BrowserType;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
 /**
  * Created by Lavr on 25.08.2016.
@@ -12,18 +14,18 @@ import org.testng.annotations.BeforeMethod;
 public class TestBase {
 
   //String browser = BrowserType.FIREFOX;
-  String browser = BrowserType.CHROME;
+  static String browser = BrowserType.CHROME;
   //String browser = BrowserType.IE;
 
 
-  protected final ApplicationMenager app = new ApplicationMenager(browser);
+  protected static final ApplicationMenager app = new ApplicationMenager(browser);
 
-  @BeforeMethod
+  @BeforeSuite
   public void setUp() throws Exception {
     app.init();
   }
 
-  @AfterMethod
+  @AfterSuite
   public void tearDown() {
     app.stop();
   }
