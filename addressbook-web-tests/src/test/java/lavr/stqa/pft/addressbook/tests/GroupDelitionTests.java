@@ -10,7 +10,7 @@ import java.util.List;
 public class GroupDelitionTests extends TestBase {
 
   @BeforeMethod
-  public void ensurePreconditions () {
+  public void ensurePreconditions() {
     app.goTo().groupPage();
     if (app.group().list().size() == 0) {
       app.group().create(new GroupData("test1", "test2", null));
@@ -28,7 +28,6 @@ public class GroupDelitionTests extends TestBase {
     before.remove(index);
     Assert.assertEquals(before, after);
   }
-
 
 
 }
